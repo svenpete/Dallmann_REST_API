@@ -9,6 +9,7 @@ public class Select {
         String sql = "SELECT * FROM DEVICE";
         Statement stmt = con.createStatement();
         ResultSet result = stmt.executeQuery(sql);
+        System.out.println(result.getRow());
         ResultSetMetaData resultSetMetaData = result.getMetaData();
         int count = resultSetMetaData.getColumnCount();
         Map<String, Object> map = new HashMap<>();
